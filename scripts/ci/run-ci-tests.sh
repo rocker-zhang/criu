@@ -324,6 +324,8 @@ run_non_shardable_tests() {
 		fi
 	fi
 
+	make -C test/others/odirect/ run
+
 	make -C test/others/make/ run CC="$CC"
 	if [ -n "$CIRCLECI" ]; then
 		# GitHub Actions (and Cirrus CI) does not provide a real TTY
